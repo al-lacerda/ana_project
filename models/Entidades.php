@@ -32,6 +32,7 @@ class Entidades extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['login','senha', 'nome','coordenador'], 'required'],
             [['nome', 'coordenador', 'login', 'senha'], 'string', 'max' => 255],
         ];
     }

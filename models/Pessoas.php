@@ -31,6 +31,7 @@ class Pessoas extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['login','senha','cpf'], 'required'],
             [['entidade_id'], 'integer'],
             [['cpf', 'login', 'senha'], 'string', 'max' => 255],
             [['entidade_id'], 'exist', 'skipOnError' => true, 'targetClass' => Entidades::className(), 'targetAttribute' => ['entidade_id' => 'id']],

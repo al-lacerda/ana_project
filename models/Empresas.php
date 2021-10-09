@@ -32,6 +32,7 @@ class Empresas extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['login','senha', "cnpj"], 'required'],
             [['entidade_id2'], 'integer'],
             [['cnpj', 'login', 'senha'], 'string', 'max' => 255],
             [['entidade_id2'], 'exist', 'skipOnError' => true, 'targetClass' => Entidades::className(), 'targetAttribute' => ['entidade_id2' => 'id']],
@@ -48,7 +49,7 @@ class Empresas extends \yii\db\ActiveRecord
             'cnpj' => 'Cnpj',
             'login' => 'Login',
             'senha' => 'Senha',
-            'entidade_id2' => 'Entidade Id2',
+            'entidade_id2' => 'Entidade ID',
         ];
     }
 

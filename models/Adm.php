@@ -27,6 +27,7 @@ class Adm extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['login','senha'], 'required'],
             [['login', 'senha'], 'string', 'max' => 255],
         ];
     }

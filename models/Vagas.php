@@ -29,6 +29,7 @@ class Vagas extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['quantidade','empresa_id'], 'required'],
             [['quantidade', 'empresa_id'], 'integer'],
             [['empresa_id'], 'exist', 'skipOnError' => true, 'targetClass' => Empresas::className(), 'targetAttribute' => ['empresa_id' => 'id']],
         ];
