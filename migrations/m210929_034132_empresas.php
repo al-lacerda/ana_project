@@ -17,6 +17,7 @@ class m210929_034132_empresas extends Migration
             'cnpj'=>$this->string(),
             'login'=>$this->string(),
             'senha'=>$this->string(),
+           // 'nome'=>$this->string(),
             'entidade_id2'=>$this->integer(),
         ]);
         $this->addForeignKey(
