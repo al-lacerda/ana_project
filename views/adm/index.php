@@ -15,11 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-    <?php 
-            if (!Yii::$app->user->isGuest) {
-                echo Html::a('Novo Administrador', ['create'], ['class' => 'btn btn-success']); 
-            }
-        ?>
+        <?= Html::a('Novo Administrador', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
     </p>
 
     <?php //echo $this->render('_search', ['model' => $searchModel]); ?>

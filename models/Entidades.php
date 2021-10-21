@@ -70,4 +70,13 @@ class Entidades extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Pessoas::className(), ['entidade_id' => 'id']);
     }
+    public function beforeSave($insert)
+    {
+       if (parent::beforeSave($insert)) {
+           $this->senha = Yii::$app->security->generatePasswordHash($this->senha);
+           return true;
+       } else {
+           return false;
+       }
+    }
 }
