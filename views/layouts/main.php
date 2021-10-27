@@ -21,6 +21,8 @@ AppAsset::register($this);
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <link rel = "stylesheet" href = " https : // uso . Fontawesome . Com / lançamentos / v5 . 3 . 1 / css / todos . Css " >
+  
 </head>
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>

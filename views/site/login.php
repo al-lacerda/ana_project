@@ -7,6 +7,7 @@
 use yii\bootstrap4\ActiveForm;
 use yii\bootstrap4\Html;
 
+
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -22,7 +23,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
             'labelOptions' => ['class' => 'col-lg-1 col-form-label'],
         ],
-    ]); ?>
+        ]);  
+    ?>
+
 
         <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 
