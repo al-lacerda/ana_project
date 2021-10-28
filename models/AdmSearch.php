@@ -65,5 +65,13 @@ class AdmSearch extends Adm
             ->andFilterWhere(['like', 'senha', $this->senha]);
 
         return $dataProvider;
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' =>[
+                'pageSize'=>50,
+            ],
+        ]);
+
     }
 }

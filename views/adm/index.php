@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         return Html::a('<span class="glyphicon glyphicon-trash"></span>', ['delete', 'id' => $model->id], [
                             'class' => '',
                             'data' => [
-                                'confirm' => 'Tem certezxa que deseja excluir este item?',
+                                'confirm' => 'Tem certeza que deseja excluir este item?',
                                 'method' => 'post',
                             ],
                         ]);

@@ -15,6 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>Preencha os dados de login:</p>
+    
 
     <?php $form = ActiveForm::begin([
         'id' => 'login-form',
@@ -25,7 +26,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
         ]);  
     ?>
-
 
         <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 
